@@ -34,7 +34,7 @@ export async function getStaticProps({ params }) {
   console.log(params);
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const res = await fetch(`http://localhost:3000/api/posts/${params.id}`);
+  const res = await fetch(`https://testnext-rockie2695.vercel.app/api/posts/${params.id}`);
   const post = await res.json();
 
   /*
