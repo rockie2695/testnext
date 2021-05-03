@@ -16,7 +16,7 @@ const Post = ({ post }) => {
 // This function gets called at build time
 export async function getStaticPaths() {
   // Call an external API endpoint to get posts
-  const res = await fetch("http://localhost:3000/api/blog");
+  const res = await fetch(process.env.host + "/api/blog");
   const posts = await res.json();
 
   // Get the paths we want to pre-render based on posts
